@@ -2,11 +2,13 @@ import './App.css';
 import React from 'react';
 import CharacterCard from './CharacterCard';
 
-
+const word = "Hello";
 function App() {
   return (
     <div>
-        <CharacterCard/>
+      {
+        Array.from(word).map((c,i)=><CharacterCard value ={c} key={i}/> )
+      }    
     </div>
   );
 }
