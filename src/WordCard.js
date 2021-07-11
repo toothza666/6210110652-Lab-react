@@ -30,27 +30,26 @@ export default function WordCard(props){
             if(guess == state.word){
                 console.log('yeah!')
                 setState({...state, completed: true})
+            }else if (state.attempt == state.word.length){
+                console.log('T T')
+                console.log( 'Correct Ans:',state.word)
+                
             }else{
                 console.log('reset,next attempt')
                 setState({...state, guess: '', attempt: state.attempt +1})
                 
+                let j= Math.floor(Math.random() *state.word.length)
 
-                // for (let i = 0; i<state.attempt;i++){
-                //         let j= Math.floor(Math.random() *state.word.length)
-                //         console.log('num',j)
-
-                        
-                //         Ans.push(state.word[j]) 
-                        
-                // }
-
-               for(let i=state.attempt; i<state.word.length;i++){
-                    Ans.push('_')
-                }
+                for(let i=0 ; i<state.word.length;i++){
+                        if(i!=j)
+                            Ans.push('_')
+                        else {
+                            Ans.push(state.word[j])
+                            
+                        }
+                } 
                 
-            }
-                
-                console.log('Hint',Ans)
+            }   console.log('Hint',Ans)
                 console.log('attempt',state.attempt)
 
         }
