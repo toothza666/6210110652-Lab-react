@@ -39,7 +39,9 @@ export default function WordCard(props){
                 
                 
                 for (let i = 0; i<state.attempt;i++){
-                        Ans.push(state.word[i])        
+                        let j= Math.floor(Math.random() *state.word.length)
+                        console.log('num',j)
+                        Ans.push(state.word[j])        
                 }
 
                 for(let i=state.attempt; i<state.word.length;i++){
@@ -47,8 +49,10 @@ export default function WordCard(props){
                 }
                 
             }
+
                 console.log('Hint',Ans)
                 console.log('attempt',state.attempt)
+
         }
         
     } 
