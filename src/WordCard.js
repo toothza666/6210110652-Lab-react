@@ -24,7 +24,7 @@ export default function WordCard(props){
 
         let guess = state.guess + c
         setState({...state, guess})
-
+        console.log (guess)
 
         if(guess.length == state.word.length){
             if(guess == state.word){
@@ -34,9 +34,18 @@ export default function WordCard(props){
                 console.log('reset,next attempt')
                 setState({...state, guess: '', attempt: state.attempt +1})
                 
+
+
+                const Ans = [];
+                
+                for (let i = 0; i<state.attempt;i++){
+                        Ans.push(state.word[i])
+                        console.log('Hint',Ans)
+                }
+
             }
         }
-        console.log (guess)
+        
     } 
 
 
