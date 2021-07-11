@@ -18,7 +18,7 @@ const prepareStateFromWord = given_word =>{
 export default function WordCard(props){
 
     const [state, setState] = useState(prepareStateFromWord(props.value))
-    const Ans = [];
+    const Ans =[];
     const activationHandler =c =>{
         console.log(`${c} has been activated.`)
 
@@ -35,21 +35,21 @@ export default function WordCard(props){
                 setState({...state, guess: '', attempt: state.attempt +1})
                 
 
+                // for (let i = 0; i<state.attempt;i++){
+                //         let j= Math.floor(Math.random() *state.word.length)
+                //         console.log('num',j)
 
-                
-                
-                for (let i = 0; i<state.attempt;i++){
-                        let j= Math.floor(Math.random() *state.word.length)
-                        console.log('num',j)
-                        Ans.push(state.word[j])        
-                }
+                        
+                //         Ans.push(state.word[j]) 
+                        
+                // }
 
-                for(let i=state.attempt; i<state.word.length;i++){
+               for(let i=state.attempt; i<state.word.length;i++){
                     Ans.push('_')
                 }
                 
             }
-
+                
                 console.log('Hint',Ans)
                 console.log('attempt',state.attempt)
 
