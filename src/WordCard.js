@@ -1,6 +1,6 @@
 import React , { useState } from 'react';
 import  _, { attempt } from 'lodash'
-import CharaacterCard from './CharacterCard';
+import CharacterCard from './CharacterCard';
 
 const prepareStateFromWord = given_word =>{
         let word = given_word.toUpperCase()
