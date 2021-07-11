@@ -36,6 +36,7 @@ export default function WordCard(props){
                 
             }
         }
+        console.log (guess)
     } 
 
 
